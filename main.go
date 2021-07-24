@@ -18,9 +18,7 @@ func stringToUpper(input string) (string, error) {
 		return "", errors.New("string input length must longer than 0")
 	}
 
-	runes := []rune(input)
-
-	for _, char := range runes {
+	for _, char := range input {
 		if isIncludedSpaces(string(char)) {
 			return "", errors.New("string input cannot accept some spaces")
 		}
