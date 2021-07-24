@@ -21,7 +21,7 @@ var parameters = []struct {
 
 func TestStringToUpperByParameters(t *testing.T) {
 	for _, testCase := range parameters {
-		err, res := stringToUpper(testCase.in)
+		res, err := stringToUpper(testCase.in)
 		assert.Equal(t, testCase.err, err)
 		assert.Equal(t, testCase.out, res)
 	}

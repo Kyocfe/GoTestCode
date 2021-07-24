@@ -8,19 +8,19 @@ import (
 )
 
 func TestStringToUpper_IncludedSpaces(t *testing.T) {
-	err, res := stringToUpper("testsuc cessful")
+	res, err := stringToUpper("testsuc cessful")
 	assert.Equal(t, err, errors.New("string input cannot accept some spaces"))
 	assert.Equal(t, res, "")
 }
 
 func TestStringToUpper_StringLengthZero(t *testing.T) {
-	err, res := stringToUpper("")
+	res, err := stringToUpper("")
 	assert.Equal(t, err, errors.New("string input length must longer than 0"))
 	assert.Equal(t, res, "")
 }
 
 func TestStringToUpper_Success(t *testing.T) {
-	err, res := stringToUpper("testsuccessful")
+	res, err := stringToUpper("testsuccessful")
 	assert.Equal(t, err, nil)
 	assert.Equal(t, res, "TESTSUCCESSFUL")
 }
